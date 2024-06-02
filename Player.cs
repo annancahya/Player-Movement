@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         PlayerMoveKeyboard();
+        AnimatePlayer();
     }
 
     void PlayerMoveKeyboard()
@@ -40,4 +41,24 @@ public class Player : MonoBehaviour
         movementX = Input.GetAxisRaw("Horizontal");
         transform.position += new Vector3(movementX, 0f, 0f) * Time.deltaTime * moveForce;
     }
+
+    void AnimatePlayer()
+{
+
+    if (movementX > 0f)
+    {
+        anim.SetBool(WALK_ANIMATION, true);
+        sr.flipX = false;
+    }
+    else if (movementX < 0f)
+    {
+        anim.SetBool(WALK_ANIMATION, true);
+        sr.flipX = true;
+    }
+    else 
+    {
+        anim.SetBool(WALK_ANIMATION, false);
+    }
+
+}
 }
