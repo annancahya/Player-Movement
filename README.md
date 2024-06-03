@@ -1,2 +1,2 @@
 # Player-Movement
-Membuat character game dapat bergerak secara horizontal dengan inputan user.
+Membuat character game dapat berjalan secara horizontal dan loncat secara vertical dengan inputan user.
